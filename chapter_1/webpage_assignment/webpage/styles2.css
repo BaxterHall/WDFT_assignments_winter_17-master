@@ -51,7 +51,10 @@ h2 {
     color:dodgerblue;
 
 }
+.sidebar ul li {
+    margin-bottom: 20px;
 
+}
 ul {
     list-style-type: none;
 }
