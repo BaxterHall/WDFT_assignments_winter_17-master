@@ -27,12 +27,13 @@ body {
     background-repeat: no-repeat;
     height: 550px;
     width: 100%;
+    overflow: hidden;
 }   
 h1 { 
     color:dodgerblue;
     text-align: center;
     font-size: 48px;
-    padding-top: 450px;
+    padding-top: 420px;
 
 }
 
