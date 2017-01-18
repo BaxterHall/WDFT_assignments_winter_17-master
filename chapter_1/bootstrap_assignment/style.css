@@ -1,0 +1,15 @@
+.header {
+        text-align:center;
+}
+
+.thumbnail {
+    padding: 20px 10px;
+    border: 0px;
+}
+
+p {
+    padding: 10px 5px;
+    border: 0px;
+    text-align: center;
+    font-size: 22px;
+}
