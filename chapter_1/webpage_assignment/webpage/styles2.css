@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* START CODING BELOW */
+
+
+.navbar {
+        height: 60px;
+        width: 100%;
+        background-color:black;
+        opacity:0.8;
+        position: fixed;
+        
+}
+
+.main { 
+
+    background-image: url("assets/images/header-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100%;
+}   
+h1 { 
+    color:dodgerblue;
+    text-align: center;
+    font-size: 48px;
+    padding-top: 450px;
+
+}
+
+h2 {
+    position: relative;
+    left: 350px;
+    color: blue;
+}
+.sidebar {
+
+    color:blue;
+    float: left;
+    
+}
+.sidebar li:hover {
+    color:dodgerblue;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+.tabs {
+    text-align: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+}
+
+.tabs li {
+    margin:  10px;
+    padding:  10px;
+    border: 1px solid black;
+    background: white;
+    display: inline-block;
+    border-radius: 5px 5px 0px 0px;
+    height: 120px;
+    width: 200px;
+}
