@@ -1,0 +1,10 @@
+header {
+    text-align: center;
+}
+.photo {
+    width:100%;
+}
+
+@media (max-width: 767px) {
+    
+}
