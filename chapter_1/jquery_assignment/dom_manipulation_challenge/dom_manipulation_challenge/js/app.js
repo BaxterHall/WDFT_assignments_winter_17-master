@@ -24,8 +24,7 @@ $("#input1").keyup(function() {
 )
 });
 
-
-
-$("#box4").animate({left:"399px"},2000)
-           .animate({top:"149px"}, 2000)
+$("#box4").animate({
+    left:"399px",
+    top:"149px"}, 2000)
            ;
