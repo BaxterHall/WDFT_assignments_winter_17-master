@@ -26,8 +26,6 @@ $("#input1").keyup(function() {
 
 
 
-$("#box4").click(function () {
-    $("#box4").animate ({ 'marginLeft' : "+399px"})
-    $("#box4").animate ({ 'marginTop' : "+150px"}), 2000
-    
-});
+$("#box4").animate({left:"399px"},2000)
+           .animate({top:"150px"}, 2000)
+           ;
