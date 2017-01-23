@@ -1,3 +1,7 @@
+/* DOM Manipulation Review
+Great job on this assignment.  Everything looks good, just try to remember to be consistent with your indentation.
+*/
+
 //Write your jQuery code in this file
 $("#edit-header").html("The jQuery Challenge");
 
