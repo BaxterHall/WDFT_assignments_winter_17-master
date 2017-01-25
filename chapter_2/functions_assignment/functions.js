@@ -6,7 +6,7 @@
 
 // define order variables "main" "side" "drink"
 
-order('Burger', 'Salad', 'Coffee');
+order('Lobster', 'lobster', 'Steak', 'Steak', 'Lobster', 'Steak', 'Fries', 'Fries', 'Fries', 'Fries', 'Wine', 'Wine', 'Wine');
 
 // WRITE YOUR CODE BELOW
 // // Order Function Here:
@@ -25,24 +25,19 @@ function order() {
     let numOfitems = ""
     for (let i = 0; i < arguments.length; i++) {
         for (let j = 0; j < menu.length; j++) {
-
-            if (arguments[i] == menu[j].name) {
+           if (arguments[i].toLowerCase() == menu[j].name.toLowerCase()) {
                 numOfitems++
+                
             }
         }
     }
-
     if (numOfitems === arguments.length) {
         cook(arguments)
     }
-
-
     else {
         (console.log('Please Order Again'))
     }
-}
-
-
+};
 
 // Cook Function Here:
 
@@ -53,16 +48,16 @@ function cook() { //run cook function with different variables
     let cookTime = 0;       //create empty variable for cook time
     for (let i = 0; i < arguments[0].length; i++) {
         for (let j = 0; j < menu.length; j++) {
-            if (arguments[0][i] == menu[j].name) {
+            if (arguments[0][i].toLowerCase() == menu[j].name.toLowerCase()) {
                 cookTime += menu[j].time
             }
         }
     }
-    console.log(arguments[0]);
+    // console.log(arguments[0]);
     const argu = arguments[0];
 
     console.log("Your Order Will Take " + cookTime + " Minutes.");
-    setTimeout(function(){ serve(argu) }, cookTime * 1000)
+    setTimeout(function () { serve(argu) }, cookTime * 1000)
 
 };
 
@@ -75,7 +70,7 @@ function serve() {
     let fPrice = 0;
     for (let i = 0; i < arguments[0].length; i++) {
         for (let j = 0; j < menu.length; j++) {
-            if (arguments[0][i] === menu[j].name) {
+            if (arguments[0][i].toLowerCase() === menu[j].name.toLowerCase()) {
                 fPrice += menu[j].price
             };
 
@@ -153,7 +148,7 @@ function generateMenu() {
         time: 1,
         price: 0
     }, {
-        name: 'Beer',
+        name: 'beer',
         time: 1,
         price: 5
     }, {
