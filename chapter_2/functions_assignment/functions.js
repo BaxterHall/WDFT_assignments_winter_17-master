@@ -35,7 +35,7 @@ function order() {
         cook(arguments)
     }
     else {
-        (console.log('Please Order Again'))
+        (console.log('We Dont Serve That Here, You Idiot, Get Out!!'))
     }
 };
 
