@@ -117,11 +117,11 @@ function filter(dataArrayName, score) {
 // and sort the array by the value of that property.
 
 // console.log(sort(PERSONDATA))
-function myfunction() {
+function rankitup(array) {
 array.sort(function(a, b){return a-b});
 }
 
-console.log()
+console.log(rankitup)
 
 // function sort(array) {
 //     let ranks = []
