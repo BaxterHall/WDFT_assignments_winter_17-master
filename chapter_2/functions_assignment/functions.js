@@ -77,7 +77,7 @@ function serve() {
         }
 
     }
-    console.log(`Your Total is${fPrice}`)
+    console.log(`Your Total is ${fPrice}`)
 };
 
 
