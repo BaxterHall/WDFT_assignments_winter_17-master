@@ -6,56 +6,79 @@
 
 // define order variables "main" "side" "drink"
 
-order('Steak', 'Baked Potato', 'Beer'); 
+order('Lobster', 'lobster', 'Steak', 'Steak', 'Lobster', 'Steak', 'Fries', 'Fries', 'Fries', 'Fries', 'Wine', 'Wine', 'Wine');
 
 // WRITE YOUR CODE BELOW
 // // Order Function Here:
 
 
-function order(main, side, drink) { 
-    if (main && side && drink === undefined) { //run error message if either variable is undefined//
-        console.log('Please Order Again')
+// function order(main, side, drink) { 
+//     if (main && side && drink === undefined) { //run error message if either variable is undefined//
+//         console.log('Please Order Again')
+//     }
+//     else {
+//         cook(main, side, drink) //run cook function
+
+
+function order() {
+    let menu = generateMenu()
+    let numOfitems = ""
+    for (let i = 0; i < arguments.length; i++) {
+        for (let j = 0; j < menu.length; j++) {
+           if (arguments[i].toLowerCase() == menu[j].name.toLowerCase()) {
+                numOfitems++
+                
+            }
+        }
+    }
+    if (numOfitems === arguments.length) {
+        cook(arguments)
     }
     else {
-        cook(main, side, drink) //run cook function
-
+        (console.log('Please Order Again'))
     }
 };
 
 // Cook Function Here:
 
 
-function cook(main, side, drink) { //run cook function with different variables
+function cook() { //run cook function with different variables
+
     let menu = generateMenu(); //add generateMenu function as "menu" variable
     let cookTime = 0;       //create empty variable for cook time
-    for (var i = 0; i < menu.length; i++) { //creates loop that searchs for menu items
-        if (main === menu[i].name || side === menu[i].name || drink === menu[i].name) { //searches through menu array to find matching names
-            cookTime += menu[i].time //asigns time from array onto cooktime value
-
-
+    for (let i = 0; i < arguments[0].length; i++) {
+        for (let j = 0; j < menu.length; j++) {
+            if (arguments[0][i].toLowerCase() == menu[j].name.toLowerCase()) {
+                cookTime += menu[j].time
+            }
         }
     }
-    console.log("Your Order Will Take " + cookTime + " Minutes.");
-    setTimeout(function () {
-        serve(main, side, drink);
-    }, (cookTime * 1000));
+    // console.log(arguments[0]);
+    const argu = arguments[0];
 
-}
+    console.log("Your Order Will Take " + cookTime + " Minutes.");
+    setTimeout(function () { serve(argu) }, cookTime * 1000)
+
+};
+
 
 
 // Serve Function Here:
-function serve(main, side, drink) {
+function serve() {
+    console.log(arguments[0])
     let menu = generateMenu();
     let fPrice = 0;
-    for (var i = 0; i < menu.length; i++) {
-        if (main === menu[i].name || side === menu[i].name || drink === menu[i].name) {
-            fPrice += menu[i].price
+    for (let i = 0; i < arguments[0].length; i++) {
+        for (let j = 0; j < menu.length; j++) {
+            if (arguments[0][i].toLowerCase() === menu[j].name.toLowerCase()) {
+                fPrice += menu[j].price
+            };
+
         }
 
     }
     console.log("Your Total is " + fPrice + " Dollars.")
-}
-
+};
 
 
 
@@ -125,7 +148,7 @@ function generateMenu() {
         time: 1,
         price: 0
     }, {
-        name: 'Beer',
+        name: 'beer',
         time: 1,
         price: 5
     }, {

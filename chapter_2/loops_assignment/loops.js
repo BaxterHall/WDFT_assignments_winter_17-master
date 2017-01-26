@@ -47,12 +47,11 @@ largeNum(arr3)
 //  the number of times equal to the current loop index (ie. 1, 2, 2, 3, 3, 3, ...).
 
 
-for (var i = 1; i <= 8; i++) {
-    for (var j = 1; j <= i; j++) {
+    for (var i = 1; i <= 8; i++) {
+        for (var j = 1; j <= i; j++) {
         console.log(i)
     }
 };
-
 // Excercise 4
 // Alter your answer to Exercise 3 to log the numbers in the form of a triangle.
 var help = ""
