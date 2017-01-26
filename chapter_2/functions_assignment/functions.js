@@ -6,7 +6,7 @@
 
 // define order variables "main" "side" "drink"
 
-order('Lobster', 'lobster', 'Steak', 'Steak', 'Lobster', 'Steak', 'Fries', 'Fries', 'Fries', 'Fries', 'Wine', 'Wine', 'Wine');
+order('lobster', 'lobster', 'Steak', 'Steak', 'Lobster', 'Steak', 'Fries', 'Fries', 'Fries', 'Fries', 'Wine', 'Wine', 'Wine');
 
 // WRITE YOUR CODE BELOW
 // // Order Function Here:
@@ -56,7 +56,7 @@ function cook() { //run cook function with different variables
     // console.log(arguments[0]);
     const argu = arguments[0];
 
-    console.log("Your Order Will Take " + cookTime + " Minutes.");
+    console.log(`Your Meal Will Take ${cookTime} Minutes.`);
     setTimeout(function () { serve(argu) }, cookTime * 1000)
 
 };
@@ -77,7 +77,7 @@ function serve() {
         }
 
     }
-    console.log("Your Total is " + fPrice + " Dollars.")
+    console.log(`Your Total is${fPrice}`)
 };
 
 
