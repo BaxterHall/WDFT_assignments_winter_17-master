@@ -1,3 +1,10 @@
+/*Loops Assignment Review
+Good job.  If you wanted to follow the requirements entirely, you might have wanted to try building a string instead of console.logging each value as you find
+it.  This 
+
+*/
+
+
 // // Exercise 1
 const arr1 = [5, 8, 2, 1, 5, 7, 3, 4, 5, 8, 1, 2, 4, 8, 3, 1, 4, 5]; // should log 8,2,4,8,2,4,8,4
 
