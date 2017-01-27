@@ -1,7 +1,7 @@
 /*Loops Assignment Review
 Good job.  If you wanted to follow the requirements entirely, you might have wanted to try building a string instead of console.logging each value as you find
-it.  This 
-
+it.  This would allow you to console.log 8,2,4 etc instead of a new line each time you find an even number.  Also try to remember to include a ; after each 
+declaration or function call.  Try to modify your third and fourth exercises to be functions instead of just loops.
 */
 
 
