@@ -3,24 +3,6 @@
 // add an entry to your journal
 // display all the entries in your journal
 
-// function journal(title,entry,author) {
-//         this.title = title;
-//         this.entry = entry;
-//         this.author = author;
-// } 
-
-const entry1 = new entry("Hello World","this is a v short journal entry", "Baxter")
-console.log(entry1)
-
-
-const entry2 = new entry("Hello Darkness, My Old Friend","the days have gotten shorter","Sad Baxter")
-console.log(entry2)
-
-
-const entry3 = new entry("Always Look on the Brightside of life","the days have gotten longer","Happy Baxter")
-
-console.log(entry3)
-
 
 function entry(title, content, author) {
     this.title = title;
@@ -30,10 +12,58 @@ function entry(title, content, author) {
 
 function journal() {
     this.log = []
-    this.makeEntry = function(title, author, content) {}
+    this.makeEntry = function (title, author, content) {
+        const newentry = new entry(title, author, content)
+        this.log.push(newentry)
+    }
+}
+
+const bxtrjournal = new journal();
+
+bxtrjournal.makeEntry();
+
+
+$('#submit').click(function () {
+    let journaltitle = $('#title').val();
+    let journalEntry = $('#entry').val();
+    let journalAuthor = $('#author').val();
+    let entrystorage = "<div class='styled'>" +
+        "<p>" + journaltitle + "</p>" +
+        "<p>" + journalEntry + "</p>" +
+        "<p>" + journalAuthor + "</p>" +
+        "</div>";
+
+    bxtrjournal.makeEntry(journaltitle, journalEntry, journalAuthor)
+    $('#output').append(entrystorage);
+});
+console.log(bxtrjournal.log);
+
+function displayTime() {
+    let str = "";
+
+    let currentTime = new Date()
+    let hours = currentTime.getHours()
+    let minutes = currentTime.getMinutes()
+    let seconds = currentTime.getSeconds()
+
+    if (minutes < 10) {
+        minutes = "0" + minutes
+    }
+    if (seconds < 10) {
+        seconds = "0" + seconds
+    }
+    str += hours + ":" + minutes + ":" + seconds + " ";
+    if(hours > 11){
+        str += "PM"
+    } else {
+        str += "AM"
+    }
+    return str;
 }
 
 
 
-// entry.journal('Hello Darkness,my old friend', 'the days have gotten longer', 'sad Baxter');
 
+// setup html(title/content/author)
+// grab 3 values from js thru jquery
+//plug into journal & consolelog journallog with 3 values
