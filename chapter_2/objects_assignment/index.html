@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Feelies</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <header class="header">
+        <h1>Journal</h1>
+        <h5>"Mecum in via animum furiosum"</h5>
+        <img class="bottomLine" src="./images/body-ornament.png"alt="bottomLine"/>
+    </header>
+    
+    <div class="col-md-8 col-sm-6">
+        <div class="journalinput" id="input">
+            <label id="titleLabel">Title</label>
+            <textarea class="col-md-8 col-sm-6" name="title" id="title"></textarea>
+            <label id="entryLabel">Entry</label>
+            <textarea name="entry" id="entry"></textarea>
+            <label id="authorLabel">Author</label>
+            <textarea name="author" id="author"></textarea>
+            <input type="submit" id="submit" value="Set the Feels Free">
+        </div>
+     </div>
+            <!--when button is clicked, execute jQuery to console.log inputed data and run function-->
+    <div class="col-md-8 col-sm-6">
+        <div class="journaloutput" id="output"> </div>
+   
+    </div>
+    <footer>
+        <img class=footerdetail src="./images/ornament.png" alt="footerdetail"/>
+        <h6>"Confutatis maledictis, quando egrediebamur interfectorem esse nucem sacculi"</h6>
+
+    </footer>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+        <script src="journal.js" type="text/javascript"></script>
+</body>
+
+</html>
