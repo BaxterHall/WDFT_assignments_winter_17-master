@@ -1,3 +1,9 @@
+/*Advanced Loops Review
+Good job on this assignment.  In your search function you were also supposed to log the position at which the name was found.  This could be done by simply 
+adding (i+1) to the end of the string you console.log().  You could also instead of having two variables that you reassign based on whether or not you find 
+the name, just console.log() the name when you find it, and have a conditional statement if you don't find it.  Good job on the second function!
+*/
+
 //Array of people, there is no need to change this
 const PERSONDATA = [{
     name: "Michael",
@@ -121,7 +127,7 @@ function rankitup(array) {
 array.sort(function(a, b){return a-b});
 }
 
-console.log(rankitup)
+console.log(rankitup(PERSONDATA))
 
 // function sort(array) {
 //     let ranks = []

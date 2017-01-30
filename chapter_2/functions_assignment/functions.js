@@ -1,3 +1,8 @@
+/*Functions Assignments
+Good job on this assignment.  Looks like you have a firm understanding of how functions interact with eachother here.  Good job using the arguments object
+to let the user input as many parameters as they want.  Try to be consistent with your semicolons after each statement you write.  
+*/
+
 //JavaScript restaurant
 //use the generateMenu() function to get a menu object when you need it
 
