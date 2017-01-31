@@ -12,16 +12,17 @@ way to do this would be Date().toDateString();  Remember to be vigilant about ha
 // display all the entries in your journal
 
 
-function entry(title, content, author) {
+function entry(title, content, author, tag) {
     this.title = title;
     this.content = content;
     this.author = author;
+    this.tag = tag;
 }
 
 function journal() {
     this.log = []
-    this.makeEntry = function (title, author, content) {
-        const newentry = new entry(title, author, content)
+    this.makeEntry = function (title, author, content,tag) {
+        const newentry = new entry(title, author, content,tag)
         this.log.push(newentry)
     }
 }
@@ -35,13 +36,15 @@ $('#submit').click(function () {
     let journaltitle = $('#title').val();
     let journalEntry = $('#entry').val();
     let journalAuthor = $('#author').val();
+    let journalTag = $('#tag').val();
     let entrystorage = "<div class='styled'>" +
         "<p>" + journaltitle + "</p>" +
         "<p>" + journalEntry + "</p>" +
         "<p>" + journalAuthor + "</p>" +
+        "<p>" + journalTag + "</p>"
         "</div>";
 
-    bxtrjournal.makeEntry(journaltitle, journalEntry, journalAuthor)
+    bxtrjournal.makeEntry(journaltitle, journalEntry, journalAuthor, journalTag)
     $('#output').append(entrystorage);
 });
 console.log(bxtrjournal.log);

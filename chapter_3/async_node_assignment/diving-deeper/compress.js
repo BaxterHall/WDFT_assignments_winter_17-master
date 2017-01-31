@@ -1,35 +1,42 @@
-
-const zlib = require('zlib')
+// accidentaly used gzip instead of creating my own app........
+const zlib = require('zlib');
 const gzip = zlib.createGzip();
 const fs = require('fs');
+ 
 
-const input = fs.createReadStream('casper.txt');
-const output = fs.createWriteStream('casper.txt.gz');
-
-input.pipe(gzip).pipe(output);
-
-
-const input2 =  fs.createReadStream('test2.txt');
-const output2 = fs.createWriteStream('test2.txt.gz');
-
-input2.pipe(gzip).pipe(output2);
+const inp1 = fs.createReadStream('casper.txt');
+const out1 = fs.createWriteStream('casper.txt.gz');
 
 
-const input3 =  fs.createReadStream('xwing.txt');
-const output3 = fs.createWriteStream('xwing.txt.gz');
+inp1.pipe(zlib.createGzip()).pipe(out1);
 
-input3.pipe(gzip).pipe(output3);
-
-const decompress = require('decompress');
-
-decompress('casper.txt.gz').then (files =>{
-    console.log('done')
+out1.on('close', function(){
+  const inp2 = fs.createReadStream('casper.txt.gz');
+  const out2 = fs.createWriteStream('uncasper.txt');
+inp2.pipe(zlib.createGunzip()).pipe(out2);
 });
 
-decompress('test2.tst.gz').then (files => {
-    console.log("test2 decompressed")
+const inp3 = fs.createReadStream('text2.txt');
+const out3 = fs.createWriteStream('text2.txt.gz');
+
+inp3.pipe(zlib.createGzip()).pipe(out3);
+
+out3.on('close', function() {
+    const inp4 = fs.createReadStream('text2.txt.gz');
+    const out4 = fs.createWriteStream('untext2.txt');
+    inp4.pipe(zlib.createGunzip()).pipe(out4);
+
 });
 
-decompress('xwing.txt.gz').then (files => {
-    console.log("x-wing decompressed") 
-});
+const inp5 = fs.createReadStream('xwing.txt');
+const out5 = fs.createWriteStream('xwing.txt.gz');
+
+inp5.pipe(zlib.createGzip()).pipe(out5);
+
+out5.on('close', function() {
+    const inp6 = fs.createReadStream('xwing.txt.gz');
+    const out6 = fs.createReadStream('unxwing.txt');
+    inp6.pipe(createGzip()).pipe(out6);
+
+})
+
