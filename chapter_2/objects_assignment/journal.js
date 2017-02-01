@@ -1,3 +1,11 @@
+/*Object Review
+Good job on your constructor functions, looks like you've got a decent grasp on how they interact with eachother.  Looks like you were also able to take 
+user inputs and append them to your page, good job! When you're styling your page, try to test it out and see how your dynamic data interacts with your other
+elements.  When you have multiple entries on your page the bottom of the last entry will get cut off by your footer.  Also, it looks like you were trying to
+give each post a time/date, instead of writing a function to convert your date, try looking into built in Javascript methods to do this for you.  A basic 
+way to do this would be Date().toDateString();  Remember to be vigilant about having semicolons after your declarations! Looks good overall!
+*/
+
 // create a journal
 // create an entry,each entry should have a title,content and an author
 // add an entry to your journal
