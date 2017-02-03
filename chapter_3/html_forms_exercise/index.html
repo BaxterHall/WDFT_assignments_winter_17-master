@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<header>
+    <title>HTTP Forms Exercise</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</header>
+
+<body>
+    <div class="container">
+        <h1>HTTP Forms Exercise</h1>
+    </div>
+
+    <form action="http://54.81.200.253/brainstation/files/submittingforms.php" method="POST">
+        <div class="col-xs-12 col-md-8" id="form">
+            <div>
+                <p> Name</p>
+                <input type="text" id="user" name="user"></input>
+            </div>
+            <div>
+
+                <p>Bio</p>
+                <textarea type="text" id="bio" name="bio"></textarea>
+            </div>
+            <div>
+                    <p>Agree</p>
+                    <input type="checkbox" name="agree"></input>
+            </div>
+            <div>
+                <select name="city">
+                    <option value="Toronto"> Toronto</option>
+                    <option value="NewYorkCity"> New York City</option>
+                    <option value="Vancouver"> Vancouver</option>
+                </select>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="Male"> Male</input>
+                <input type="radio" name="gender" value="Female"> Female</input>
+                <input type="radio" name="gender" value="Other"> Other</input>
+            </div>
+            <div>
+                <input type="submit" name="submit"></input>
+            </div>
+        </div>    
+    </form>
+</body>
+
+</html>

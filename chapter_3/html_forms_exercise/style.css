@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}  
+
+h1 {
+    text-align: center;
+}
+
+#bio { 
+    resize:none;
+
+}
+
+#form {
+    position: absolute;
+    top: 20%;
+    left: 43%;
+
+}
+
+
+
