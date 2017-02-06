@@ -12,13 +12,13 @@ const url1 = "https://www.reddit.com/?count=25&after=t3_5sapnc"  //Remember semi
 const url2 = "https://www.reddit.com/?count=50&after=t3_5sbuk3"
 
 request(url0, function (error, response, body) {
-    let str = ""
+
     let $ = cheerio.load(body),
         text = $('a.title').each(function (index,title){
             console.log(index + ": " + $(title).text());
         });
 
-    str += text
+ 
 
    
         if (error) //Remember to include curly brackets when you write if statements like this.
@@ -28,13 +28,13 @@ request(url0, function (error, response, body) {
 );
 
 request(url1, function (error, response, body) {
-    let str = ""
+   
     let $ = cheerio.load(body),
         text = $('a.title').each(function (index,title){
             console.log(index + ": " + $(title).text());
         });
 
-    str += text
+    
 
    
         if (error)
@@ -44,13 +44,13 @@ request(url1, function (error, response, body) {
 );
 
 request(url2, function (error, response, body) {
-    let str = ""
+    
     let $ = cheerio.load(body),
         text = $('a.title').each(function (index,title){
             console.log(index + ": " + $(title).text());
         });
 
-    str += text
+    
 
    
         if (error)

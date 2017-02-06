@@ -1,0 +1,164 @@
+* {
+     box-sizing: border-box;
+}
+ 
+ body {
+     
+    font-family: 'Goudy old style', 'minion pro', 'bell mt'; 
+    background-color: white;
+     
+    min-height: 400px;
+    margin-bottom: 50px;
+ 
+}
+ 
+
+.topImage {
+    background-image: url("images/body-ornament.png");
+    background-repeat: no-repeat;
+    background-position: center,bottom;
+}
+
+.header {
+    text-align: center;
+    padding: 3%;
+    background-image:url("images/decorated-rule.png");
+    background-repeat: no-repeat;
+    background-position: center,bottom;   
+}
+
+.journalinput {
+    padding:20px;
+}
+
+#titleLabel{
+    position:absolute;
+    top: 25%;
+    left: 26%;
+}
+
+#title {
+    width:200px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+	padding: 5px;
+    resize:none;
+    margin: 20px;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+   
+}
+
+#entryLabel {
+    position:absolute;
+    top:30%;
+    left:26%;
+}
+#entry {
+    width:500px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+	padding: 5px;
+    resize: none;
+    margin: 20px;
+    position: absolute;
+    display: block;
+    top: 30%;
+    left: 25%;
+    
+}
+
+#authorLabel{
+    position:absolute;
+    top:37%;
+    left:26%
+}
+#author {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 3px; 
+	padding: 5px;
+    resize:none;
+    margin: 20px;
+    display: block;
+    position: absolute;
+    top: 37%;
+    left:25%;
+   
+}
+#tagLabel {
+    position: absolute;
+    top: 43%;
+    left: 26%;
+}
+#tag {
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 20px;
+    resize: none;
+    display: block;
+    position: absolute;
+    top: 43%;
+    left: 25%;
+}
+#submit {
+    position: absolute;
+    top: 55%;
+    left: 46%;
+    font-family: 'Goudy old style', 'minion pro', 'bell mt';
+}
+   
+
+textarea {
+     font-family: 'Goudy old style', 'minion pro', 'bell mt';
+}
+
+#searchBar {
+    width:100px;
+    height: 20px;
+    border: none; 
+	padding: 5px;
+    resize:none;
+    margin: 20px;
+    position: absolute;
+    top: 19%;
+    right: 31%;
+
+}
+#output {
+   position: absolute;
+    top: 55%;
+    left:30%;
+   
+}
+.styled {
+    padding: 20px;
+    margin:50px;
+   
+
+}
+
+#footer {
+    position:fixed;
+    margin-bottom:50px;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    position:fixed; 
+    bottom:30px; 
+    background-image:url("images/decorated-rule.png");
+    background-repeat: no-repeat;
+    background-position: center, bottom;
+    color:black;
+    text-align:center;
+    background-color:white;
+    opacity:1;
+}
