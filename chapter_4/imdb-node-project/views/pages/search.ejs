@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Search Results</title>
+   
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/styles.css">        
+    </head>
+
+    <body>
+
+       <div class="container">
+            <h1 class="text-center">Search Results</h1>
+
+            
+            <% for(i = 0; i < searched.results.length; i++) { %>
+            <a class="movie-link" href="../movieresults/<%=searched.results[i].id%>">
+            <div class="media movie-list-item">
+                <div class="media-left">
+                    <div class="poster-container">
+                        <img class="media-object movie-poster" src=  "http://image.tmdb.org/t/p/w500/<%=searched.results[i].poster_path%>" />
+                    </div>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">
+                        <%=searched.results[i].title%>
+                        
+                      
+                    </h4>
+                    <div>
+                        <%=searched.results[i].overview%>
+                    </div>
+                    <div class="released-date">
+                        Released: <%=searched.results[i].release_date%>
+                    </div>
+                </div>
+            </div>
+            </a>
+        <% } %>
+        
+         <div class="row">
+                    <div class=buttons>
+                        <a class="btn btn-primary" href=<%='../'%>>Back</a>
+                    </div>
+         </div>
+         </div>
+    </body>
+</html>
+
