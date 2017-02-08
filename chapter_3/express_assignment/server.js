@@ -1,3 +1,7 @@
+/*Express Review
+Nice job setting up the static folder for your journal! 
+*/
+
 const express = require('express');
 const app = express();
 

@@ -1,9 +1,5 @@
-/*Object Review
-Good job on your constructor functions, looks like you've got a decent grasp on how they interact with eachother.  Looks like you were also able to take 
-user inputs and append them to your page, good job! When you're styling your page, try to test it out and see how your dynamic data interacts with your other
-elements.  When you have multiple entries on your page the bottom of the last entry will get cut off by your footer.  Also, it looks like you were trying to
-give each post a time/date, instead of writing a function to convert your date, try looking into built in Javascript methods to do this for you.  A basic 
-way to do this would be Date().toDateString();  Remember to be vigilant about having semicolons after your declarations! Looks good overall!
+/*Express Review
+This looks great! Your indentation and formatting are good here.  
 */
 
 // create a journal
@@ -35,7 +31,7 @@ $(document).ready(function () {
         let journalEntry = $('#entry').val();
         let journalAuthor = $('#author').val();
         let journalTag = $('#tag').val();
-        let tags = journalTag.split(", ");
+        let tags = journalTag.split(", "); //Awesome job using split to turn the user inputted string into an array. 
         console.log(tags);
         let entrystorage = "<div class='styled'>" +
             "<p>" + journaltitle + "</p>" +
@@ -50,7 +46,8 @@ $(document).ready(function () {
     });
     console.log(bxtrjournal.log);
 
-
+//Nice job with the search function! Looks great! To take this one step further you could have split the search string as well and checked against multiple
+//tags individually.  
 
     $("#search").submit(function (e) {
         e.preventDefault();
