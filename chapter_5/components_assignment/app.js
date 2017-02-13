@@ -21,13 +21,51 @@ const cards = [{
 class App extends React.Component {
     render() {
         /* START WRITING YOUR CODE HERE */
-    }
+
+
+        //  const cards = this.props.cards;
+        
+        let cardsJSX = [];
+        for(let i=0; i < cards.length; i++) {
+            
+           cardsJSX.push(< Card image={cards[i].imgSrc} title={cards[i].title}/>)
+
+        }
+        return (
+
+            <div className='container'>
+                <h1>BrainStaGram</h1>
+                 <div className="row">
+                        {cardsJSX}
+                </div>
+
+            
+            
+            </div>
+        )
+      
 }
+};
 
 class Card extends React.Component {
     render() {
         /* START WRITING YOUR CODE HERE */
-    }
-}
 
-ReactDOM.render(<App />, document.getElementById('app'))
+       
+         return (
+         
+        <div className="col s4">
+            <div className="card">
+                <div className="card-image">
+                    <img src={this.props.image}/>
+                    <span className="card-title">{this.props.title}</span>
+                </div>
+                <div className="card-content">
+                    <p>Powering the next generation of creators. Build your skills in business, design &amp; technology.</p>
+                </div>
+            </div>
+        </div>
+         )}
+
+};
+ReactDOM.render(< App />, document.getElementById('app'));
