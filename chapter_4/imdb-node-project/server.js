@@ -1,3 +1,8 @@
+/*Node Assignment Review
+Awesome job on this assignment! Looks like you got the API implemented alongside all the other requirements so great job. It's great to get used to digging
+through API documentation to find what information you actually want to be manipulating.  You'll notice that in one of your requests you've written in an
+error handling case, but in your other one you haven't.  Try to be consistent not only with your syntax/formatting but also your error handling as well.
+*/
 // initialize Express in project
 
 const express = require('express');
