@@ -20,6 +20,8 @@ class App extends React.Component {
 		// this.setState({currentImage: 4});
 		this.nextBtn = this.nextBtn.bind(this)
 		this.prevBtn = this.prevBtn.bind(this)
+
+		
 	};
 
 	nextBtn() {
