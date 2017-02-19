@@ -1,3 +1,8 @@
+/*Components Review
+Good job on this assignment! In your App component you've called the cards array directly, which while that works, isn't the best practice.  You should avoid referencing
+outside variables, and instead pass them into your component as props.  This can be done by passing a prop called cards into your App component in the render method.
+This way you can access the array as a prop and not have to worry about changing the data outside the scope of your App component.
+*/
 const cards = [{
     imgSrc: 'images/square1.jpg',
     title: 'Card 1'
