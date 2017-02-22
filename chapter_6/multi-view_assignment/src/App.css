@@ -1,0 +1,23 @@
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+body{
+  padding-top: 70px;
+  
+}
+
+.App {
+  text-align: center;
+}
+
+
+img {
+  position: absolute;
+  left: 550px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+

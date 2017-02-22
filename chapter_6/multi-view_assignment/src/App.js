@@ -1,13 +1,13 @@
+import React from 'react';
+import Add from './Add';
+import Todo from './Todo';
+
+
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			todos: [
-				{ text: 'learn angular', done: false, id: 1 },
-				{ text: 'write the content for the next module', done: false, id: 2 },
-				{ text: 'buy cheese', done: true, id: 3 },
-				{ text: 'buy milk', done: true, id: 4 }
-			],
+			todos: localStorage.todos ? JSON.parse(localStorage.todos) : [],
 			status: "all"
 		}
 		this.clickHandleV2 = this.clickHandleV2.bind(this);
@@ -18,48 +18,52 @@ class App extends React.Component {
 
 
 
-	}
+	};
 	clickHandleV2(id) {
 		const newTodos = this.state.todos.map((todos) => {
 
-			if (todos.id == id) {
-				return { text: todos.text, done: !todos.done, id: todos.id };
+			if (todos.id === id) {
+				return { text: todos.text, done: !todos.done, id: todos.id }
 			} else {
-				return todos;
+				return todos
 			}
 
 		})
-		this.setState({ todos: newTodos });
-		
-	}
-
-	
+		this.setState({ todos: newTodos })
+	};
 
 	addTodo(val) {
+		
 		event.preventDefault();
+	
+
 		// console.log(val)
 
-		const todo = { text: val, done: false, id: this.state.todos.length + 1 };
+		const todo = { text: val, done: false, id: this.state.todos.length + 1 }
 
 		const newState = this.state.todos;
 
 		newState.push(todo);
 
 		// console.log(event)
+		
 
 		this.setState({ todos: newState });
 		event.target.addTodo.value = "";
 
-
-
-	}
+	};
+	componentDidUpdate() {
+		localStorage.todos = JSON.stringify(this.state.todos)
+	};
+	
 
 	statusChange(event) {
 
 		event.target.value;
 
 		this.setState({ status: event.target.value });
-	}
+	};
+	
 
 	clearComplete(event) {
 
@@ -68,13 +72,13 @@ class App extends React.Component {
 		});
 
 		this.setState({
-			todos: notCompleted;
+			todos: notCompleted
 		});
 
-
+		
 	};
 	render() {
-
+		
 
 
 		const todos = this.state.todos;
@@ -83,6 +87,7 @@ class App extends React.Component {
 
 			arrayOfThings = todos.map((element) => {
 				return <Todo
+					key={element.text}
 					text={element.text}
 					done={element.done}
 					clickHandleV2={this.clickHandleV2}
@@ -122,7 +127,7 @@ class App extends React.Component {
 
 		return (
 			<div className="container">
-				<h1 className="text-center">todos</h1>
+				<h1 className="text-center">Get This Shit Done Yo!!!</h1>
 
 				<Add addTodo={this.addTodo} />
 
@@ -151,56 +156,8 @@ class App extends React.Component {
 };
 
 
-class Todo extends React.Component {
 
 
 
-	render() {
+export default App;
 
-
-
-		return (
-
-			<li className="list-group-item">
-				<input id={this.props.id} type="checkbox" checked={this.props.done} value={this.props.done ? "completed" : "active"} onChange={() => { this.props.clickHandleV2(this.props.id) }} />
-				<label className={this.props.done ? "done" : ""}>{this.props.text}</label>
-			</li>
-
-		)
-	}
-
-
-}
-
-class Add extends React.Component {
-
-
-
-
-
-	render() {
-
-
-		;
-
-		return (
-
-			<form onSubmit={() => { this.props.addTodo(this.refs.addTodo.value) }}>
-				<div className="input-group">
-					<span className="input-group-btn">
-						<button className="btn btn-primary" type="submit" >Add</button>
-					</span>
-					<input className="form-control" type="text" placeholder="add a todo" ref="addTodo" name="addTodo" />
-				</div>
-			</form>
-
-
-		)
-
-
-	}
-
-};
-
-
-ReactDOM.render(<App />, document.getElementById('app'));
