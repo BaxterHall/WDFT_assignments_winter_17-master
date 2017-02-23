@@ -13,11 +13,20 @@ body{
 }
 
 
-img {
-  position: absolute;
-  left: 550px;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
+.image{
+ height: 700px;
+ width: 500px;
 }
-
+img {
+  position: relative;
+  left: 15%;
+}
+.pet {
+  text-align: center;
+  font-size: 15px;
+}
+.video {
+  position: relative;
+  left: 25%;
+  
+}

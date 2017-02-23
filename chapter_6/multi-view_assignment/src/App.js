@@ -7,7 +7,10 @@ class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-			todos: localStorage.todos ? JSON.parse(localStorage.todos) : [],
+			todos: localStorage.todos ? JSON.parse(localStorage.todos) : [{ text: 'learn angular', done: false, id: 1 },
+				{ text: 'write the content for the next module', done: false, id: 2 },
+				{ text: 'buy cheese', done: true, id: 3 },
+				{ text: 'buy milk', done: true, id: 4 }],
 			status: "all"
 		}
 		this.clickHandleV2 = this.clickHandleV2.bind(this);

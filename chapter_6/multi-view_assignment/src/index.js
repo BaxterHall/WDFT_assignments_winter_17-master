@@ -9,7 +9,7 @@ import App from './App';
 
 
 
-console.log('hello')
+
 
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/" component={Home} />
