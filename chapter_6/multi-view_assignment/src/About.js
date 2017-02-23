@@ -51,7 +51,7 @@ class About extends React.Component {
                     It came to Castle Rock again in the summer of 1980.
                 </p>
 
-                <img src="Cujo2.jpg" />
+                <img src="Dodd.jpg" />
             </div>
         </div>
         )
