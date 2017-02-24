@@ -1,0 +1,29 @@
+.done {
+  text-decoration: line-through;
+  color: grey;
+}
+
+
+
+.App {
+  text-align: center;
+}
+
+.image{
+ height: 700px;
+ width: 500px;
+}
+img {
+  position: relative;
+  left: 15%;
+}
+.pet {
+  text-align: center;
+  font-size: 15px;
+}
+.video {
+  position: relative;
+  left: 25%;
+  pointer-events: none;
+  
+}
