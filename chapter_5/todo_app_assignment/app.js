@@ -53,7 +53,7 @@ class App extends React.Component {
 			if (!todos.done) return todos;
 		});
 		this.setState({
-			todos: notCompleted;
+			todos: notCompleted
 		});
 	};
 	render() {

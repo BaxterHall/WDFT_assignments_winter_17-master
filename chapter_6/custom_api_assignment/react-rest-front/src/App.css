@@ -5,6 +5,10 @@
 .App {
   text-align: center;
 }
+.text-center {
+  padding: 70px;
+  
+}
 .image{
  height: 700px;
  width: 500px;
