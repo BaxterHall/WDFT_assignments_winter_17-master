@@ -1,3 +1,11 @@
+/* Todo Assignment Review
+Great job on this assignment! Looks like you got a lot of the diving deeper segments done as well.  To help with the readability of your code, try not to 
+have a ton of blank lines everywhere.  It may help when you're writing your code, but when you're finished make sure you clean up all the blank space. Nice job 
+with all your uses of ternary's, as you can see they're very powerful when you use state/props to add or remove classes from elements.  You've used map for one 
+segment of your filtering by all/active/complete, but if you want to challenge yourself, try using filter/map or reduce instead of running a regular loop and pushing
+your <Todo /> into a new array.
+*/
+
 class App extends React.Component {
 	constructor() {
 		super();
