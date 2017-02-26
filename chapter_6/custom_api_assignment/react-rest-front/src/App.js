@@ -38,28 +38,20 @@ class App extends React.Component {
   }
     addTodo(val) {
       event.preventDefault();
-      // console.log(val)
       const todo = { text: val, done: false, id: this.state.todos.length + 1 }
       const newState = this.state.todos;
       newState.push(todo);
-      // console.log(event)
       this.setState({ todos: newState });
 
       axios.post('http://localhost:8080/addtodos', {newState})
         .then(response => {
           console.log(response)
         })
-
         .catch(err => {
           console.log(err)
         })
-
       event.target.addTodo.value = "";
     };
-
-    // componentDidUpdate() {
-    // // 	localStorage.todos = JSON.stringify(this.state.todos)
-    // };
     statusChange(event) {
       event.target.value;
       this.setState({ status: event.target.value });
@@ -72,13 +64,6 @@ class App extends React.Component {
         todos: notCompleted
       });
     };
-    // componentDidUpdate() {
-
-    //   axios.get('http://localhost:8080/home', )
-    //     .then(response => {
-
-    //     })
-    // }
     render() {
       const todos = this.state.todos;
       let arrayOfThings = [];
@@ -119,8 +104,7 @@ class App extends React.Component {
       };
       return (
         <div className="container">
-          <h1 className="text-center">Get This Shit Done Yo!!!</h1>
-          
+          <h1 className="text-center">Get This Shit Done Yo!!!</h1>      
           <Add addTodo={this.addTodo} />
           <ul className="list-group">
             {arrayOfThings}
