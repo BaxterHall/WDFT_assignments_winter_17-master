@@ -29,10 +29,6 @@ app.get('/home', (req, res) => {
         console.log('OK: ' + 'todos.txt');
         tasks = JSON.parse(data)
         res.json(tasks)
-
-
-
-
     });
 });
 app.post('/addtodos', (req, res) => {

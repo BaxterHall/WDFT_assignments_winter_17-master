@@ -7,10 +7,6 @@ import './App.css';
 import App from './App';
 
 
-
-
-
-
 ReactDOM.render(<Router history={browserHistory}>
     <Route path="/" component={Home} />
     <Route path="/about" component={About} />
