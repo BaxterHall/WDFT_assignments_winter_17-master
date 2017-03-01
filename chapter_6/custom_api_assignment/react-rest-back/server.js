@@ -24,10 +24,10 @@ app.listen(8080, () => {
 
 app.get('/home', (req, res) => {
     //  console.log(req.body);
-    fs.readFile('todos.txt', 'utf8', function (err, data) {
+    fs.readFileSync('todos.txt', 'utf8', function (err, data) {
         if (err) throw err;
         console.log('OK: ' + 'todos.txt');
-        tasks = JSON.parse(data)
+        tasks = (data)
         res.json(tasks)
     });
 });
