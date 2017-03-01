@@ -91,11 +91,13 @@ class App extends Component {
     }
     return (
       <div className="App">
+      <header className="header">
         <h1 className="bigtitle">LETS GET READY TO RUMBLE</h1>
+        </header>
         {React.cloneElement(this.props.children, { songs, changeSong: this.changeSong, nextSong: this.nextSong, prevSong: this.prevSong, playSong: this.playSong, playButton: this.playButton })}
         <audio id="player" src={songs[this.state.currentSong].source} >
         </audio>
-        <div className="controls">
+        <div className="player">
           <i id="main" className="fa fa-step-backward fa-2x" aria-hidden="true" onClick={this.prevSong}></i>
           {playButton}
           <i id='main' className="fa fa-step-forward fa-2x" aria-hidden="true" onClick={this.nextSong}></i>
