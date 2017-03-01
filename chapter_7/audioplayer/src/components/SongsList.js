@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
+import {Link } from 'react-router';
 import "../index.css"
 
 class SongsList extends Component {

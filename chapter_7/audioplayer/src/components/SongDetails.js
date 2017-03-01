@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Router, Route, IndexRoute, browserHistory, Link } from 'react-router';
+import {Link } from 'react-router';
 import "../index.css"
 
 class SongDetails extends Component {
@@ -22,7 +22,7 @@ class SongDetails extends Component {
                     </nav>
                 </div>
                 
-                <img className='songImage' src={songs[this.props.routeParams.id].img}/>
+                <img role="presentation" className='songImage' src={songs[this.props.routeParams.id].img}/>
                 
                 <h1 className='songTitle'>{songs[this.props.routeParams.id].title}</h1>
                  <i id="detailPlay" className="fa fa-play-circle-o fa-2x" aria-hidden="true" onClick={() => this.props.changeSong(this.props.routeParams.id)}> </i>
