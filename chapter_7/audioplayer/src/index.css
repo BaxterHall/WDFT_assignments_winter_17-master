@@ -47,10 +47,14 @@ body {
   padding: 20px;
   text-align:center;
 }
+#detailPlay{
+  position:absolute;
+  left: 48%;
+}
 .description{
   text-align: center;
   font-size: 20px;
-  padding: 30px;
+  padding: 60px;
 }
 .player{ 
   position: relative;

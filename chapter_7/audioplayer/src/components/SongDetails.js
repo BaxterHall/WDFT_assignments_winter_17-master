@@ -15,13 +15,18 @@ class SongDetails extends Component {
                         
                             <ul>
                                 <Link id='back' className='titles' to="/"> <i className="fa fa-undo fa-2x" aria-hidden="true"></i></Link>
+                               
                             </ul>
                         </div>
                         
                     </nav>
                 </div>
+                
                 <img className='songImage' src={songs[this.props.routeParams.id].img}/>
+                
                 <h1 className='songTitle'>{songs[this.props.routeParams.id].title}</h1>
+                 <i id="detailPlay" className="fa fa-play-circle-o fa-2x" aria-hidden="true" onClick={() => this.props.changeSong(this.props.routeParams.id)}> </i>
+                 
                 <p className='description'>{songs[this.props.routeParams.id].description}</p>
                 {this.props.playButton}
             </div>
