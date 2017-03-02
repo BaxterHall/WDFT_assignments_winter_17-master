@@ -84,10 +84,10 @@ class App extends Component {
     //  console.log(songs[this.state.currentSong].title)
     let playButton;
     if (this.state.playing === true) {
-      playButton = (<i id='main' className="fa fa-pause-circle-o fa-2x" id="pause" aria-hidden="true" onClick={() => { this.pauseSong() }}></i>)
+      playButton = (<i id='main' className="fa fa-pause-circle-o fa-2x" aria-hidden="true" onClick={() => { this.pauseSong() }}></i>)
     }
     if (this.state.playing === false) {
-      playButton = (<i id='main' className="fa fa-play-circle-o fa-2x" id="play" aria-hidden="true" onClick={() => { this.pauseSong() }}></i>)
+      playButton = (<i id='main' className="fa fa-play-circle-o fa-2x"  aria-hidden="true" onClick={() => { this.pauseSong() }}></i>)
     }
     return (
       <div className="App">

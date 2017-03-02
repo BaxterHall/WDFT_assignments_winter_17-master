@@ -6,7 +6,8 @@ class SongDetails extends Component {
     render() {
         // console.log(this.props)
         let songs = this.props.songs
-        // console.log(this.props.routeParams.id)
+        console.log(songs[this.props.routeParams.id].title)
+
         return (
             <div>
                 <div>

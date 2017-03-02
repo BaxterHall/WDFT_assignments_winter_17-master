@@ -10,7 +10,7 @@ class SongsList extends Component {
             return (
                 <div>
                     <div className='button'>
-                        <i id="main" className="fa fa-play-circle-o fa-2x" id="play" aria-hidden="true" onClick={() => this.props.changeSong(element.id)}> </i>
+                        <i id="main" className="fa fa-play-circle-o fa-2x" aria-hidden="true" onClick={() => this.props.changeSong(element.id)}> </i>
                     </div>
                     <div className='title'>
                         <Link className='titles' to={`songs/${element.id}`}><h1 className='songtitles'>{element.title}</h1></Link>
