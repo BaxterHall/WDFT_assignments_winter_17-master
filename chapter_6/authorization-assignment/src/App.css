@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, p{
+  text-align: center;
+}
+.profit{
+  text-align: center;
+  color: green;
+}
+
+.profit:hover
+{
+    cursor: default;
+    transform: rotate(2880deg);
+    transition: ease 3s
+}
+li{
+  text-decoration: none;
+}
