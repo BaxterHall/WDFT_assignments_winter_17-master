@@ -1,3 +1,8 @@
+/*Custom API Review
+Great job on this assignment! Looks like you got everything working.  You had one small error with your componentWillMount, where you were referencing something 
+that didn't exist.  I've written how you would fix that, but otherwise amazing job!
+*/
+
 import React from 'react';
 import Add from './Add';
 import Todo from './Todo';
@@ -33,7 +38,7 @@ class App extends React.Component {
     axios.get('http://localhost:8080/home')
       .then(response => {
         console.log(response.data);
-        this.setState({todos: response.data.todos})
+        this.setState({todos: response.data.todos}) // <== Right here you're trying to access something that doesn't exist, it would simply be response.data
       })
   }
     addTodo(val) {
