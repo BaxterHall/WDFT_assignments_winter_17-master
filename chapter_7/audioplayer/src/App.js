@@ -1,3 +1,8 @@
+/* Audio Player Review
+Awesome job on this assignment! Everything looks great, your code is very clean and easy to read.  You've got one small bug in your code, when you go to a songDetail
+page, clicking the play button will actually change the state of currentSong to a string.  This will break your nextSong and prevSong methods as they operate 
+around the assumption that currentSong is an integer and can be added to/subtracted from.  Overall amazing job, and great song choices, needs more Smashmouth.
+*/
 import React, { Component } from 'react';
 
 class App extends Component {
