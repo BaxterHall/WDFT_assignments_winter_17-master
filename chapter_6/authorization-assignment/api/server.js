@@ -1,3 +1,11 @@
+/* Auth Review
+Good job on this assignment, looks like you got all of the tasks done. You've missed one crucial step however, which is comparing the hashed password with 
+the password the user enters using bcrypt.  Right now all someone has to do is make a text file in your notpasswords folder and if they login using that name
+they get in no matter what, which is not exactly secure. This would have to be done inside your login endpoint, if you revisit this assignment or have some form of 
+user authentication on your final project try to implement that. Great error messages, and great private data page though, A++ on those (may want to not use 
+error messages like that when you're writing things that go public though, for reasons I probably don't have to say).
+*/
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
