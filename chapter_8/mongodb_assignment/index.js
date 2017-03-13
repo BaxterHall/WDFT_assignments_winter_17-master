@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const Dealership = require('./api/models/dealerships');
 const Car = require('./api/models/cars')
+const Review = require('./api/models/reviews');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -27,6 +28,10 @@ app.use('/cars', cars)
 const dealer = require('./api/router/dealerships')
 
 app.use('/dealerships', dealer)
+
+
+//DIVING DEEPER
+
 
 // const seedDealerships = require('./seeds/dealerships');
 // const seedCars = require('./seeds/cars');
