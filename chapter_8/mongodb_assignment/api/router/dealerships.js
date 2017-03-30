@@ -172,15 +172,16 @@ router.post('/reviews/:id', (req, res) => {
 });
 // PUT a review for certain dealership
 //target dealership and then target review id
-router.put('/reviews/:id', (req, res) => {
-    let newReview = req.body;
-    Dealership.findById(req.params.id)
+router.put('/:dealership_id/reviews/:id', (req, res) => {
+    let update = req.body;
+    Dealership.findById(req.params.dealership_id)
         .then(dealership => {
-            dealership.reviews.push(Review(newReview));
-            return dealership.save()
+            const review = dealership.reviews.id(req.params.review_id);
+            Object.assign(review, update);
+            dealership.save()
         })
         .then(savedDealership => {
-            res.json(savedDealership)
+            res.json(savedDealership.reviews)
         })
         .catch(err => {
             console.log(err)
